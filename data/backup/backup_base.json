@@ -2452,12 +2452,12 @@
 				"creator": 155265116
 			},
 			"stats": {
-				"msg_count": 37,
+				"msg_count": 43,
 				"mat": 0,
-				"symbols": 366
+				"symbols": 447
 			},
 			"defend": {
-				"autokick": 0,
+				"autokick": 1,
 				"inv_grp": 1
 			},
 			"cmds": {
@@ -2486,20 +2486,18 @@
 				}
 			],
 			"banned": [],
-			"blacklisted": [
-				594701401
-			],
+			"blacklisted": [],
 			"users": [
 				{
 					"user_id": 155265116,
-					"msg_count": 27,
-					"symbols": 239,
+					"msg_count": 32,
+					"symbols": 307,
 					"warns": 0
 				},
 				{
 					"user_id": 594701401,
-					"msg_count": 10,
-					"symbols": 127,
+					"msg_count": 11,
+					"symbols": 140,
 					"warns": 0
 				}
 			]
