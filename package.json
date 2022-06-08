@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
+  "engines": {
+    "node": "14.8.0"
+  },
   "dependencies": {
     "VK-Promise": "^0.2.91",
     "aes-js": "^2.0.0",
@@ -30,15 +33,12 @@
     "node-speakable-master": "^0.3.0",
     "node-vk-sdk": "^1.0.5",
     "npm": "^3.10.3",
-    "phantomjs-prebuilt": "^2.1.16",
-    "phantomjs": "^2.1.7",
     "prequest": "^1.0.0",
     "promise-phantom": "^3.1.6",
     "python": "^0.0.4",
     "raknet": "^1.8.0",
     "rebuild": "^0.1.2",
     "request": "^2.72.0",
-    "rucaptcha": "^1.0.5",
     "samp-query": "^0.1.5",
     "scanf": "^0.7.2",
     "sha256": "^0.2.0",
@@ -57,7 +57,7 @@
     "websocket": "^1.0.23",
     "xml2js": "^0.4.17",
     "xmlhttprequest": "^1.8.0",
-    "yandex-speech": "^0.0.13"
+    "playadope": "1.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -65,8 +65,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "engines": {
-    "node": "14.8.0"
-  }
+  "license": "ISC"
 }
