@@ -2,7 +2,7 @@
   "name": "manager",
   "version": "1.0.0",
   "description": "CHAT MANAGER",
-  "main": "manager.js",
+  "main": "cm.js",
   "scripts": {
     "start": "node cm.js"
   },
