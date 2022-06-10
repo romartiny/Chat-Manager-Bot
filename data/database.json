@@ -1,0 +1,129 @@
+{
+	"chats": [
+		{
+			"chat_id": 9,
+			"info": {
+				"creator": 155265116,
+				"rules_msg": "Правил нету.",
+				"title": "Укажите в chatmanager",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			},
+			"settings": {
+				"lang": "ru"
+			}
+		}
+	],
+	"users": [
+		{
+			"chat_id": 9,
+			"user_id": 155265116,
+			"info": {
+				"in_chat": true,
+				"creator": true,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "11.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 9,
+			"user_id": 594701401,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": false,
+				"admin": false,
+				"moder": false,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "11.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 9,
+			"user_id": -202133184,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "11.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		}
+	]
+}
