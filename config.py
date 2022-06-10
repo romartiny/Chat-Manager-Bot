@@ -3,5 +3,5 @@ confirmation_token = "d628d0da"
 bot_id = 202133184
 owner = 155265116
 
-host = "localhost"
+host = "safe-anchorage-02162.herokuapp.com/"
 port = 8080
