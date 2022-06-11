@@ -1,0 +1,17 @@
+{
+  "name": "bot_1",
+  "version": "0.0.1",
+  "description": "const st = vk.updates;",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "vk-io": "^4.0.0-rc.2",
+    "vk-io-question": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "KireKW",
+  "license": "ISC"
+}

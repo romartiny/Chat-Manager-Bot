@@ -1,0 +1,37 @@
+[
+	{
+		"id": 9,
+		"users": [
+			{
+				"id": 155265116,
+				"name": "[id155265116|Амина Швец]",
+				"level": 4,
+				"ban": false,
+				"kick": false
+			},
+			{
+				"id": 594701401,
+				"name": "[id594701401|Макс Потоков]",
+				"level": 1,
+				"ban": false,
+				"kick": false
+			}
+		],
+		"groups": [
+			{
+				"id": 202133184,
+				"name": "CHAT MANAGER",
+				"screen_name": "chaterbot",
+				"level": 3,
+				"ban": false,
+				"kick": false
+			}
+		],
+		"title": "123",
+		"owner": 155265116,
+		"reg": true,
+		"people": 3,
+		"uid": 1,
+		"peerId": 2000000009
+	}
+]
