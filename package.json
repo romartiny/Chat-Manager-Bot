@@ -1,17 +1,23 @@
 {
-  "name": "bot_1",
-  "version": "0.0.1",
-  "description": "const st = vk.updates;",
-  "main": "index.js",
+  "name": "chat-manager-bot",
+  "version": "1.0.0",
+  "main": "bot.js",
   "dependencies": {
-    "colors": "^1.4.0",
-    "vk-io": "^4.0.0-rc.2",
-    "vk-io-question": "^2.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
-  "author": "KireKW",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romartiny/Chat-Manager-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romartiny/Chat-Manager-Bot/issues"
+  },
+  "homepage": "https://github.com/romartiny/Chat-Manager-Bot#readme",
+  "keywords": [],
+  "description": ""
 }
