@@ -2,7 +2,9 @@
   "name": "chat-manager-bot",
   "version": "1.0.0",
   "main": "bot.js",
-  "dependencies": {},
+  "dependencies": {
+    "modules": "file:modules"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,12 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/romartiny/Chat-Manager-Bot.git"
   },
-  "author": "",
+  "author": "Romartiny",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/romartiny/Chat-Manager-Bot/issues"
   },
   "homepage": "https://github.com/romartiny/Chat-Manager-Bot#readme",
   "keywords": [],
-  "description": ""
+  "description": "chat"
 }
