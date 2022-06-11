@@ -1,0 +1,32 @@
+{
+	"chats": [
+		{
+			"chat_id": 9,
+			"info": {
+				"creator": 0,
+				"rules_msg": "Правил нету.",
+				"title": "Укажите в chatmanager",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			},
+			"settings": {
+				"lang": "ru"
+			}
+		}
+	],
+	"users": []
+}
