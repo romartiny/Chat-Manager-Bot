@@ -1,1 +1,1 @@
-web: node bot/bot.js
+web: bundle exec thin start -p $PORT
