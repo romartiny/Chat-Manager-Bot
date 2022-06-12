@@ -6,7 +6,8 @@
     "proj": "file:proj"
   },
   "devDependencies": {},
-  "scripts": {
+  "scripts" : {
+    "start": "node bot/bot.js"
   },
   "repository": {
     "type": "git",
