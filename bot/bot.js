@@ -1,8 +1,14 @@
 ﻿var playa_module = require("playadope.js")
   fs = require("fs")
+<<<<<<< HEAD
 var chatmanager = playa_module("vk1.a.8Ba7K1Wh25l_a6jqCf5cMjyMoa1K5UnKFAoL9tCq8dNOt4Z5fEbgPBLZY6Mus3sWvNC-qm0UVUn9M8svoQ1nubwFenlaUiJH1eYRoHJxmKSFNtR2qH_4z4DpahBjf3XA5t3jL9XUbfQWhL0AdWIYqnHJI-04gUzQr0nsUB0vAuouohhXv0Be1Ukvlwfin6Jb")
   chatmgrbase = require("./database/database.json")
   lang = require("./database/lang.json")
+=======
+var chatmanager = playa_module("")
+  chatmgrbase = require("database.json")
+  lang = require("lang.json")
+>>>>>>> 0d53cc6918a897a1db678d80fe83120e75c962f2
 
 
 var stopbots = 0
