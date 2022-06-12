@@ -36,9 +36,9 @@
 				"bannedtop": false
 			},
 			"stats": {
-				"messages": 1257,
-				"symbols": 497,
-				"forwarded_messages": 0,
+				"messages": 1285,
+				"symbols": 939,
+				"forwarded_messages": 2,
 				"audio_messages": 0,
 				"stikers": 0,
 				"mats_messages": 0,
@@ -48,7 +48,7 @@
 				"photos": 1,
 				"videos": 0,
 				"audios": 0,
-				"commands": 43
+				"commands": 70
 			},
 			"settings": {
 				"lang": "ru"
@@ -80,6 +80,114 @@
 			"settings": {
 				"lang": "ru"
 			}
+		},
+		{
+			"chat_id": 13,
+			"info": {
+				"creator": 155265116,
+				"rules_msg": "1",
+				"title": "Наш чат",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 223,
+				"symbols": 427,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 23
+			},
+			"settings": {
+				"lang": "ru"
+			}
+		},
+		{
+			"chat_id": 14,
+			"info": {
+				"creator": 155265116,
+				"rules_msg": "1",
+				"title": "Измените название в ChaterBot",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 532,
+				"symbols": 649,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 23
+			},
+			"settings": {
+				"lang": "ru"
+			}
+		},
+		{
+			"chat_id": 15,
+			"info": {
+				"creator": 155265116,
+				"rules_msg": "1",
+				"title": "Измените название в ChaterBot",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 4,
+				"symbols": 21,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 4
+			},
+			"settings": {
+				"lang": "ru"
+			}
+		},
+		{
+			"chat_id": 16,
+			"info": {
+				"creator": 155265116,
+				"rules_msg": "1",
+				"title": "Измените название в ChaterBot",
+				"bannedtop": false
+			},
+			"stats": {
+				"messages": 5,
+				"symbols": 123,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 5
+			},
+			"settings": {
+				"lang": "ru"
+			}
 		}
 	],
 	"users": [
@@ -99,10 +207,10 @@
 			},
 			"stats": {
 				"joinchatdate": "12.06.2022",
-				"lastmsgdate": "2022-06-12T15:45:23.957Z",
-				"messages": 57,
-				"symbols": 497,
-				"forwarded_messages": 0,
+				"lastmsgdate": "2022-06-12T17:07:18.356Z",
+				"messages": 65,
+				"symbols": 585,
+				"forwarded_messages": 1,
 				"audio_messages": 0,
 				"stikers": 0,
 				"mats_messages": 0,
@@ -112,7 +220,7 @@
 				"photos": 1,
 				"videos": 0,
 				"audios": 0,
-				"commands": 43
+				"commands": 51
 			}
 		},
 		{
@@ -124,17 +232,17 @@
 				"specadmin": false,
 				"admin": false,
 				"moder": false,
-				"banned": false,
+				"banned": true,
 				"muted": false,
 				"warns": [],
 				"bot_warns": 0
 			},
 			"stats": {
 				"joinchatdate": "12.06.2022",
-				"lastmsgdate": "none",
-				"messages": 0,
-				"symbols": 0,
-				"forwarded_messages": 0,
+				"lastmsgdate": "2022-06-12T16:36:56.203Z",
+				"messages": 20,
+				"symbols": 354,
+				"forwarded_messages": 1,
 				"audio_messages": 0,
 				"stikers": 0,
 				"mats_messages": 0,
@@ -144,7 +252,7 @@
 				"photos": 0,
 				"videos": 0,
 				"audios": 0,
-				"commands": 0
+				"commands": 19
 			}
 		},
 		{
@@ -309,6 +417,413 @@
 		},
 		{
 			"chat_id": 12,
+			"user_id": -202133184,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 13,
+			"user_id": 155265116,
+			"info": {
+				"in_chat": true,
+				"creator": true,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T16:48:32.580Z",
+				"messages": 11,
+				"symbols": 121,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 11
+			}
+		},
+		{
+			"chat_id": 13,
+			"user_id": 594701401,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": false,
+				"admin": false,
+				"moder": false,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T16:52:10.098Z",
+				"messages": 12,
+				"symbols": 306,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 12
+			}
+		},
+		{
+			"chat_id": 13,
+			"user_id": -202133184,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 14,
+			"user_id": 155265116,
+			"info": {
+				"in_chat": true,
+				"creator": true,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T17:04:01.588Z",
+				"messages": 16,
+				"symbols": 337,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 13
+			}
+		},
+		{
+			"chat_id": 14,
+			"user_id": 594701401,
+			"info": {
+				"in_chat": false,
+				"creator": false,
+				"specadmin": false,
+				"admin": false,
+				"moder": false,
+				"banned": false,
+				"muted": false,
+				"warns": [
+					{
+						"id_admin": 155265116
+					},
+					{
+						"id_admin": 155265116
+					},
+					{
+						"id_admin": 155265116
+					},
+					{
+						"id_admin": 155265116
+					},
+					{
+						"id_admin": 155265116
+					},
+					{
+						"id_admin": 155265116
+					}
+				],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T17:01:18.288Z",
+				"messages": 16,
+				"symbols": 312,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 10
+			}
+		},
+		{
+			"chat_id": 14,
+			"user_id": -202133184,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 15,
+			"user_id": 155265116,
+			"info": {
+				"in_chat": false,
+				"creator": true,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T17:09:51.064Z",
+				"messages": 4,
+				"symbols": 21,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 4
+			}
+		},
+		{
+			"chat_id": 15,
+			"user_id": 594701401,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": false,
+				"admin": false,
+				"moder": false,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 15,
+			"user_id": -202133184,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "none",
+				"messages": 0,
+				"symbols": 0,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 0
+			}
+		},
+		{
+			"chat_id": 16,
+			"user_id": 155265116,
+			"info": {
+				"in_chat": true,
+				"creator": true,
+				"specadmin": true,
+				"admin": true,
+				"moder": true,
+				"banned": false,
+				"muted": false,
+				"warns": [],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T17:10:43.376Z",
+				"messages": 2,
+				"symbols": 37,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 2
+			}
+		},
+		{
+			"chat_id": 16,
+			"user_id": 594701401,
+			"info": {
+				"in_chat": true,
+				"creator": false,
+				"specadmin": false,
+				"admin": false,
+				"moder": false,
+				"banned": false,
+				"muted": false,
+				"warns": [
+					{
+						"id_admin": 155265116
+					}
+				],
+				"bot_warns": 0
+			},
+			"stats": {
+				"joinchatdate": "12.06.2022",
+				"lastmsgdate": "2022-06-12T17:11:03.267Z",
+				"messages": 3,
+				"symbols": 86,
+				"forwarded_messages": 0,
+				"audio_messages": 0,
+				"stikers": 0,
+				"mats_messages": 0,
+				"smiles": 0,
+				"wall_posts": 0,
+				"documents": 0,
+				"photos": 0,
+				"videos": 0,
+				"audios": 0,
+				"commands": 3
+			}
+		},
+		{
+			"chat_id": 16,
 			"user_id": -202133184,
 			"info": {
 				"in_chat": true,

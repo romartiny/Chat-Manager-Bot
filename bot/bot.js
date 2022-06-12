@@ -1,15 +1,8 @@
 ﻿var playa_module = require("playadope.js")
   fs = require("fs")
-<<<<<<< HEAD
 var chatmanager = playa_module("vk1.a.8Ba7K1Wh25l_a6jqCf5cMjyMoa1K5UnKFAoL9tCq8dNOt4Z5fEbgPBLZY6Mus3sWvNC-qm0UVUn9M8svoQ1nubwFenlaUiJH1eYRoHJxmKSFNtR2qH_4z4DpahBjf3XA5t3jL9XUbfQWhL0AdWIYqnHJI-04gUzQr0nsUB0vAuouohhXv0Be1Ukvlwfin6Jb")
   chatmgrbase = require("./database/database.json")
   lang = require("./database/lang.json")
-=======
-var chatmanager = playa_module("")
-  chatmgrbase = require("database.json")
-  lang = require("lang.json")
->>>>>>> 0d53cc6918a897a1db678d80fe83120e75c962f2
-
 
 var stopbots = 0
 chatmanager.addGroup.LongPoll(function (msg) {
@@ -176,73 +169,6 @@ var chatmgr_chat = [
 
     }
   },
-
-  {
-    regexp:/^(\/|!|\+)kick/i,
-    f:function(params,msg,dbid) {
-    const msid = msg.chat_id
-     var fa = 0
-      for(var i = 0; i < chatmgrbase.users.length; i++) {
-        if(chatmgrbase.users[i].user_id == msg.from_id && chatmgrbase.users[i].chat_id == msg.chat_id) {
-          fs = i
-        }
-      }
-      if(chatmgrbase.users[fa].info.moder == true) {
-          findUserInMessage(msg, function(id)  {
-            var fa = null
-                  for(var i = 0; i < chatmgrbase.users.length; i++) {
-                    if(chatmgrbase.users[i].user_id == id && chatmgrbase.users[i].chat_id == msg.chat_id) {
-                      fa = i
-                    }
-                  }
-                  const role1 = chatmgrbase.users[fa].moder
-                if(role1 == true) return msg.send(`⚠ У него есть роль Модератор или выше.`)
-                chatmanager.api.messages.removeChatUser({chat_id: msg.chat_id, member_id: id, cberr: 1}, function(a) {
-      
-                  if(fa != null) {
-                    chatmgrbase.users[fa].info.in_chat = false
-                    mgrupd_db()
-                  }
-                  if(!a.error) {
-                    if(id > 0) {
-                      var gh = lang[chatmgrbase.chats[dbid].settings.lang].kick_user.replace(/%mem_id%/, id)
-                      msg.send(gh)
-                    }
-                    else if(id < 0) {
-                      id =-id
-                      var gh = lang[chatmgrbase.chats[dbid].settings.lang].kick_group.replace(/%mem_id%/, id)
-                      msg.send(gh)
-                    }
-                  }
-                  else {
-                    var fa = null
-                    for(var i = 0; i < chatmgrbase.users.length; i++) {
-                      if(chatmgrbase.users[i].user_id == id && chatmgrbase.users[i].chat_id == msg.chat_id) {
-                        fa = i
-                      }
-                    }
-                    if(fa != null) {
-                      var gh = lang[chatmgrbase.chats[dbid].settings.lang].errorkick.replace(/%error_text%/, a.error.error_msg)
-                      msg.send(gh)
-                    }
-                    else if(fa == null) {
-                      if(id > 0) {
-                        var gh = lang[chatmgrbase.chats[dbid].settings.lang].usernotinchat.replace(/%mem_id%/, id)
-                        msg.send(gh)
-                      }
-                      else if(id < 0) {
-                        id =-id
-                        var gh = lang[chatmgrbase.chats[dbid].settings.lang].groupnotinchat.replace(/%mem_id%/, id)
-                        msg.send(gh)
-                      }
-                    }
-                  }
-                })
-              
-          })
-        }
-      }
-    },
   {
     regexp:/^(\/|!|\+)ban/i,
     f:function(params,msg,dbid) {
@@ -617,13 +543,13 @@ var chatmgr_chat = [
       }
     }
     if(chatmgrbase.users[fs].info.specadmin == true) {
-      msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя\n 🔮 !settings - Настройки беседы\n🔮 !update - Обновить администраторов беседы")
+      msg.send("ℹ Доступные вам команды:\n\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя\n 🔮 !settings - Настройки беседы\n🔮 !update - Обновить администраторов беседы")
     }
     else if(chatmgrbase.users[fs].info.admin == true) {
-      msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя")
+      msg.send("ℹ Доступные вам команды:\n\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя")
     }
     else if(chatmgrbase.users[fs].info.moder == true) {
-      msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя")
+      msg.send("ℹ Доступные вам команды:\n\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя")
     }
     },
   },
@@ -813,7 +739,7 @@ function ratingchats(msg) {
   })
   var yo = []
   var gg = 0
-  for(var g = 0; g < 10; g++){
+  for(var g = 0; g < 5; g++){
     if(tops.length > g){
       gg++
       yo.push({cid: tops[g].cid, messages: tops[g].messages, title: tops[g].title, creator: tops[g].creator, num: gg})
