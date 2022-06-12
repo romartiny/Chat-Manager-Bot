@@ -1,8 +1,8 @@
 ﻿var playa_module = require("playadope.js")
   fs = require("fs")
 var chatmanager = playa_module("vk1.a.8Ba7K1Wh25l_a6jqCf5cMjyMoa1K5UnKFAoL9tCq8dNOt4Z5fEbgPBLZY6Mus3sWvNC-qm0UVUn9M8svoQ1nubwFenlaUiJH1eYRoHJxmKSFNtR2qH_4z4DpahBjf3XA5t3jL9XUbfQWhL0AdWIYqnHJI-04gUzQr0nsUB0vAuouohhXv0Be1Ukvlwfin6Jb")
-  chatmgrbase = require("database.json")
-  lang = require("lang.json")
+  chatmgrbase = require("./database/database.json")
+  lang = require("./database/lang.json")
 
 
 var stopbots = 0
@@ -27,7 +27,7 @@ chatmanager.addGroup.LongPoll(function (msg) {
       }
     }
     if(is == null) {
-      chatmgrbase.chats.push( { "chat_id": msg.chat_id, "info": { "creator": 0, "rules_msg": "Правил нету.", "title": "Укажите в chatmanager", "bannedtop": false}, "stats": { "messages": 0, "symbols": 0, "forwarded_messages": 0, "audio_messages": 0, "stikers": 0, "mats_messages": 0, "smiles": 0, "wall_posts": 0, "documents": 0, "photos": 0, "videos": 0, "audios": 0, "commands": 0 }, "settings": { "lang": "ru" }} )
+      chatmgrbase.chats.push( { "chat_id": msg.chat_id, "info": { "creator": 0, "rules_msg": "1", "title": "Измените название в ChaterBot", "bannedtop": false}, "stats": { "messages": 0, "symbols": 0, "forwarded_messages": 0, "audio_messages": 0, "stikers": 0, "mats_messages": 0, "smiles": 0, "wall_posts": 0, "documents": 0, "photos": 0, "videos": 0, "audios": 0, "commands": 0 }, "settings": { "lang": "ru" }} )
       mgrupd_db()
       checkChat(msg)
     }
@@ -129,7 +129,7 @@ chatmanager.addGroup.LongPoll(function (msg) {
 
 var chatmgr_chat = [
   {
-    regexp:/^(\/|!|\+)проверка$/i,
+    regexp:/^(\/|!|\+)check$/i,
     f:function(params,msg,dbid) {
       checkChat(msg)
     },
@@ -160,7 +160,7 @@ var chatmgr_chat = [
               else if(paam[1] == "title") {
                 if(paam[2]) {
                   chatmgrbase.chats[dbid].info.title = paam[2]
-                  msg.send("Новые название беседы в топе: " + paam[2])
+                  msg.send("Новое название беседы в топе: " + paam[2])
                 }
               }
               mgrupd_db()
@@ -458,7 +458,7 @@ var chatmgr_chat = [
   },
 //ПРОФИЛЬ
   {
-    regexp:/^(\/|!|\+)профиль$/i,
+    regexp:/^(\/|!|\+)mystats$/i,
     f:function(params,msg,dbid) {
       var fa = null
       for(var i = 0; i < chatmgrbase.users.length; i++) {
@@ -466,26 +466,26 @@ var chatmgr_chat = [
           fa = i
         }
       }
-      role = `Польователь`
+      role = `Пользователь`
       if(chatmgrbase.users[fa].info.moder == true) role = `Moder`
       if(chatmgrbase.users[fa].info.admin == true) role = `Администратор`
       if(chatmgrbase.users[fa].info.specadmin == true) role = `Спец.Администратор`
       if(chatmgrbase.users[fa].info.creator == true) role = `Создатель беседы`
       if(fa != null) {
-        msg.send("Статистика пользователя @id" + msg.from_id + "\n👑 Роль: " + role + "\n📅 В чате с " + chatmgrbase.users[fa].stats.joinchatdate + "\n⌚ Последнее сообщение: " + chatmgrbase.users[fa].stats.lastmsgdate.customFormat( "#DD#.#MM#.#YYYY#" ) + "\n📧 Сообщений: " + chatmgrbase.users[fa].stats.messages + "\n🔣 Символов: " + chatmgrbase.users[fa].stats.symbols + "\n📩 Пересланных: " + chatmgrbase.users[fa].stats.forwarded_messages + "\n📷 Фото: " + chatmgrbase.users[fa].stats.photos + "\n📹 Видео: " + chatmgrbase.users[fa].stats.videos + "\n🎧 Аудио: " + chatmgrbase.users[fa].stats.audios + "\n❗ Команд: " + chatmgrbase.users[fa].stats.commands + "\n💩 Стикеров: " + chatmgrbase.users[fa].stats.stikers + "\n👺 Сообщений с матом: " + chatmgrbase.users[fa].stats.mats_messages + "\n🤣 Смайлов: " + chatmgrbase.users[fa].stats.smiles + "\n📣 Постов: " + chatmgrbase.users[fa].stats.wall_posts + "\n📑 Документов: " + chatmgrbase.users[fa].stats.documents + "\n🎵 Голосовых: " + chatmgrbase.users[fa].stats.audio_messages)
+        msg.send("Статистика [id" + msg.from_id + "|пользователя]\n👑 Роль: " + role + "\n📅 В чате с " + chatmgrbase.users[fa].stats.joinchatdate + "\n⌚ Последнее сообщение: " + chatmgrbase.users[fa].stats.lastmsgdate.customFormat( "#DD#.#MM#.#YYYY#" ) + "\n📧 Сообщений: " + chatmgrbase.users[fa].stats.messages + "\n🔣 Символов: " + chatmgrbase.users[fa].stats.symbols)
       }
     },
   },
 //СТАТИСКА ЧАТА
   {
-    regexp:/^(\/|!|\+)чат$/i,
+    regexp:/^(\/|!|\+)chat$/i,
     f:function(params,msg,dbid) {
       chatstats(msg)
     },
   },
 //РЕЙТИНГ ЧАТА  
   {
-    regexp:/^(\/|!|\+)рейтинг$/i,
+    regexp:/^(\/|!|\+)rating$/i,
     f:function(params,msg,dbid) {
       ratingchats(msg)
     },
@@ -548,7 +548,7 @@ var chatmgr_chat = [
   },
 //ПРАВИЛА
   {
-    regexp:/^(\/|!|\+)правила$/i,
+    regexp:/^(\/|!|\+)rules$/i,
     f:function(params,msg,dbid) {
       var fa = null
       for(var i = 0; i < chatmgrbase.users.length; i++) {
@@ -590,14 +590,14 @@ var chatmgr_chat = [
   {
     regexp:/^(\/|!|\+)reference$/i,
     f:function(params,msg,dbid) {
-      msg.send("&#128260; Справка:\n\n➡ Список команд для администраторов или модераторов (!ahelp)\n➡ Список команд для обычных пользователей (!помощь)\n➡ Нашли баг? Ваш технарь: @b40621baf7bdc2c4e5fcc63712260bc6\n➡ Есть идеи что добавить в бота? Отпишите технарю: @b40621baf7bdc2c4e5fcc63712260bc6")
+      msg.send("&#128260; Справка:\n\n➡ Список команд для администраторов или модераторов (!ahelp)\n➡ Список команд для обычных пользователей (!help)\n➡ Нашли баг? Отпишите в бота: @chaterbot")
     },
   },
 //ПОМОЩЬ  
   {
-    regexp:/^(\/|!|\+)помощь$/i,
+    regexp:/^(\/|!|\+)help$/i,
     f:function(params,msg,dbid) {
-      msg.send("ℹ Вот доступный список команд менеджера бесед:\n\n📋 !правила - Правила конференции\n👮 !admins - Список администрации\n👼 !moders - Список модераторов\n💬 !reference - Получить справку о боте\n🚫 !wlist - Список предупреждений\n✉ !чат - Статистика конференции\n📜 !CID - Узнать id чата\n🚶 !профиль - Посмотреть собственную статистику\n🥇 !рейтинг - Топ 10 активных конференций")
+      msg.send("ℹ Вот доступный список команд менеджера бесед:\n\n📋 !rules - Правила конференции\n👮 !admins - Список администрации\n👼 !moders - Список модераторов\n💬 !reference - Получить справку о боте\n🚫 !wlist - Список предупреждений\n✉ !chat - Статистика конференции\n📜 !CID - Узнать id чата\n🚶 !mystats - Посмотреть собственную статистику\n🥇 !rating - Топ 10 активных конференций")
     },
   },
 //АДМИН ПОМОЩЬ  
@@ -611,7 +611,7 @@ var chatmgr_chat = [
       }
     }
     if(chatmgrbase.users[fs].info.specadmin == true) {
-      msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя\n 🔮 !settings - Настройки беседы\n🔮 !обновить - Обновить администраторов беседы")
+      msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя\n 🔮 !settings - Настройки беседы\n🔮 !update - Обновить администраторов беседы")
     }
     else if(chatmgrbase.users[fs].info.admin == true) {
       msg.send("ℹ Доступные вам команды:\n\n🔮 !kick [ссылка] - Кикнуть пользователя\n🔮 !warn [ссылка] - Выдать варн пользователю\n🔮 !ban [ссылка] - Забанить пользователя\n🔮 !unban [ссылка] - Разбанить пользователя\n🔮 !unwarn [ссылка] - Снять варн с пользователя")
@@ -631,7 +631,7 @@ var chatmgr_chat = [
     },
   },
   {
-    regexp:/^(\/|!|\+)обновить$/i,
+    regexp:/^(\/|!|\+)update$/i,
     f:function(params,msg,dbid){
     chatmanager.api.messages.getConversationMembers({peer_id: msg.peer_id, cberr: 1}, function(a) {
     a.response.items.map(function(c) {
@@ -816,7 +816,9 @@ function ratingchats(msg) {
   var i = 1 
   var p = 1
   var l = 0
-  var lolik = "Список самых активных чатов:\n" + yo.map(a=> i++ +". " + (a.num ==1?" 🥇 ":"") + (a.num ==2?" 🥈 ":"") + (a.num ==3?" 🥉 ":"") + "«" + a.title + "» " + "- vk.com/id" + a.creator).join("\n")
+
+  var lolik = "Список самых активных чатов:\n" + yo.map(a=> i++ +". " + (a.num ==1?" 🥇 ":"") + (a.num ==2?" 🥈 ":"") + (a.num ==3?" 🥉 ":"") + "«" + a.title + "» " +  " - " + a.messages + " сообщений").join("\n")
+  
   msg.send(lolik)
 }
 
@@ -834,7 +836,7 @@ function chatstats(msg) {
     return 0
   })
   var yo = []
-  for(var g = 0; g < 10; g++){
+  for(var g = 0; g < 3; g++){
     if(tops.length > g){
       ids.push(tops[g].id)
       yo.push({id: tops[g].id, messages: tops[g].messages})
@@ -851,8 +853,8 @@ function chatstats(msg) {
   }
   if(chta != null) {
     var usernames = chatmanager.apiSync.users.get({user_ids: ids.join(","), fields: "first_name"}).response
-    var lolik = "\nСамые активные пользователи: \n" + yo.map(a=> i++ +". " + usernames.filter(e=> e.id == a.id)[0].first_name + " " + usernames.filter(e=> e.id == a.id)[0].last_name + " (vk.com/id" + a.id + ") - " + a.messages + " сообщений. ").join("\n")
-    msg.send("📧 Сообщений: " + chatmgrbase.chats[chta].stats.messages + "\n🔣 Символов: " + chatmgrbase.chats[chta].stats.symbols + "\n📩 Пересланных: " + chatmgrbase.chats[chta].stats.forwarded_messages + "\n📷 Фото: " + chatmgrbase.chats[chta].stats.photos + "\n📹 Видео: " + chatmgrbase.chats[chta].stats.videos + "\n🎧 Аудио: " + chatmgrbase.chats[chta].stats.audios + "\n❗ Команд: " + chatmgrbase.chats[chta].stats.commands + "\n💩 Стикеров: " + chatmgrbase.chats[chta].stats.stikers + "\n👺 Сообщений с матом: " + chatmgrbase.chats[chta].stats.mats_messages + "\n🤣 Смайлов: " + chatmgrbase.chats[chta].stats.smiles + "\n📣 Постов: " + chatmgrbase.chats[chta].stats.wall_posts + "\n📑 Документов: " + chatmgrbase.chats[chta].stats.documents + "\n🎵 Голосовых: " + chatmgrbase.chats[chta].stats.audio_messages + lolik)
+    var lolik = "\nСамые активные пользователи: \n" + yo.map(a=> i++ +". ["+"id" + a.id + "|" + usernames.filter(e=> e.id == a.id)[0].first_name + " " + usernames.filter(e=> e.id == a.id)[0].last_name + "] - " + a.messages + " сообщений. ").join("\n")
+    msg.send("🔥 Информация о чате "+ chatmgrbase.chats[chta].info.title +"\n📧 Сообщений: " + chatmgrbase.chats[chta].stats.messages + "\n🔣 Символов: " + chatmgrbase.chats[chta].stats.symbols + "\n📩 Пересланных: " + chatmgrbase.chats[chta].stats.forwarded_messages + "\n📷 Фото: " + chatmgrbase.chats[chta].stats.photos + "\n📹 Видео: " + chatmgrbase.chats[chta].stats.videos + "\n🎧 Аудио: " + chatmgrbase.chats[chta].stats.audios + "\n❗ Команд: " + chatmgrbase.chats[chta].stats.commands + "\n💩 Стикеров: " + chatmgrbase.chats[chta].stats.stikers + "\n👺 Сообщений с матом: " + chatmgrbase.chats[chta].stats.mats_messages + "\n🤣 Смайлов: " + chatmgrbase.chats[chta].stats.smiles + "\n📣 Постов: " + chatmgrbase.chats[chta].stats.wall_posts + "\n📑 Документов: " + chatmgrbase.chats[chta].stats.documents + "\n🎵 Голосовых: " + chatmgrbase.chats[chta].stats.audio_messages + lolik)
   }
 }
 
@@ -1107,7 +1109,7 @@ callback(cba)
 
 
 function mgrupd_db() {
-  fs.writeFileSync("database.json", JSON.stringify(chatmgrbase, null, "\t"))
+  fs.writeFileSync("./bot/database/database.json", JSON.stringify(chatmgrbase, null, "\t"))
   return 1
 }
 
@@ -1152,6 +1154,3 @@ Date.prototype.customFormat = function(formatString){
   ss=(s=this.getSeconds())<10?('0'+s):s;
   return formatString.replace("#hhhh#",hhhh).replace("#hhh#",hhh).replace("#hh#",hh).replace("#h#",h).replace("#mm#",mm).replace("#m#",m).replace("#ss#",ss).replace("#s#",s).replace("#ampm#",ampm).replace("#AMPM#",AMPM);
 }
-
-
-var _0xdf1f=["\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x20\x20\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x20\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x20\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x20\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x3A\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3A\x2B\x3A\x20\x20\x20\x20\x3A\x2B\x3A\x20\x3A\x2B\x3A\x20\x20\x20\x20\x20\x20\x20\x20\x3A\x2B\x3A\x20\x20\x20\x20\x3A\x2B\x3A\x20\x20\x20\x20\x3A\x2B\x3A\x20\x20\x20\x20\x3A\x2B\x3A\x20\x20\x20\x20\x3A\x2B\x3A\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x23\x2B\x2B\x3A\x2B\x2B\x23\x2B\x2B\x20\x2B\x23\x2B\x2B\x3A\x2B\x2B\x23\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x2B\x3A\x2B\x20\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x2B\x23\x2B\x2B\x3A\x2B\x2B\x23\x2B\x2B\x20\x20\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x23\x2B\x20\x2B\x23\x2B\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2B\x23\x2B\x20\x20\x20\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x23\x2B\x23\x20\x23\x2B\x23\x20\x20\x20\x20\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x23\x2B\x23\x20\x20\x20\x20\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x23\x23\x23\x23\x23\x23\x23\x23\x20\x20\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x20\x23\x23\x23\x23\x23\x23\x23\x23\x23\x20\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x20\x23\x23\x23\x23\x23\x23\x23\x23\x20\x20\x20\x20\x20\x20\x20\x0A\x0A\x0A\x0A\x0A\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\u0421\u043A\u0440\u0438\u043F\u0442\x20\u0443\u0441\u043F\u0435\u0448\u043D\u043E\x20\u0437\u0430\u043F\u0443\u0449\u0435\u043D\x21\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x75\x73\x65\x72\x2F\x66\x67\x77\x75\x75\x75\x75\x2F\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x53\x45\x44\x49\x53\x23\x33\x33\x39\x33\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x68\x74\x74\x70\x73\x3A\x2F\x2F\x74\x2E\x6D\x65\x2F\x4A\x61\x6D\x65\x73\x5F\x44\x69\x61\x7A\x0A\x0A\x0A\x0A\x0A\x0A","\x6C\x6F\x67","\x65\x72\x72\x6F\x72","\x63\x61\x74\x63\x68"];async function run(){console[_0xdf1f[1]](_0xdf1f[0])}run()[_0xdf1f[3]](console[_0xdf1f[2]])
