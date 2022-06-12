@@ -7,7 +7,7 @@
   },
   "devDependencies": {},
   "scripts" : {
-    "worker": "node bot/bot.js"
+    "starts": "node index.js"
   },
   "repository": {
     "type": "git",
