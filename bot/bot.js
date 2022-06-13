@@ -417,7 +417,7 @@ var chatmgr_chat = [
   },
 //РЕЙТИНГ ЧАТА  
   {
-    regexp:/^(\/|!|\+)rating$/i,
+    regexp:/^(\/|!|\+)ratting$/i,
     f:function(params,msg,dbid) {
       ratingchats(msg)
     },
